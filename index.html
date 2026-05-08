@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heni Abid — Développeur de Logiciels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg class="grain" width="100%" height="100%">
+  <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="5" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <rect width="100%" height="100%" filter="url(#n)"/>
+</svg>
+<div class="atmosphere"></div>
+
+<!-- Nav -->
+<nav class="top-nav" id="topNav">
+  <a href="#" class="nav-brand">Heni<span>Abid</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Me contacter</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span class="toggle-bar"></span><span class="toggle-bar"></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-links">
+      <a href="#" class="mobile-menu-link" data-index="01">Home</a>
+      <a href="#about" class="mobile-menu-link" data-index="02">À propos</a>
+      <a href="#experience" class="mobile-menu-link" data-index="03">Expérience</a>
+      <a href="#projects" class="mobile-menu-link" data-index="04">Projets</a>
+      <a href="#skills" class="mobile-menu-link" data-index="05">Compétences</a>
+      <a href="#contact" class="mobile-menu-link" data-index="06">Contact</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <a href="mailto:heniabid0@gmail.com">Email</a>
+      <a href="https://github.com/heniabid" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- Side Panels -->
+<nav class="side-panel left" aria-label="Scroll indicators">
+  <span class="side-label">Scroll</span>
+  <div class="side-track"><div class="side-track-fill" id="leftTrack"></div></div>
+  <div class="side-dot active"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-readout" id="scrollPct">00</div>
+</nav>
+<nav class="side-panel right" aria-label="Status indicators">
+  <span class="side-label">Status</span>
+  <div class="side-track"><div class="side-track-fill" id="rightTrack"></div></div>
+  <div class="side-dot"></div>
+  <div class="side-dot active"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-readout">DEV</div>
+</nav>
+
+<main class="main">
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-grid"></div>
+    <h1>Heni Abid<br><em>Développeur Logiciels</em></h1>
+    <p class="hero-sub">
+      Ingénieur informatique passionné, maîtrisant le développement web full-stack, 
+      la Business Intelligence et les systèmes embarqués. À la recherche de défis techniques ambitieux.
+    </p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">Voir mes projets</a>
+      <a href="#contact" class="btn-secondary">Me contacter</a>
+    </div>
+    <div style="margin:40px auto 0;width:200px;height:200px;position:relative;">
+      <!-- glow ring -->
+      <div style="position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 180deg,#6366f1,#06b6d4,#10b981,#6366f1);animation:spinRing 6s linear infinite;z-index:0;"></div>
+      <!-- white gap -->
+      <div style="position:absolute;inset:-1px;border-radius:50%;background:var(--base-deep);z-index:1;"></div>
+      <!-- photo -->
+      <div style="position:absolute;inset:4px;border-radius:50%;overflow:hidden;z-index:2;">
+        <img src="images/profile.png" alt="Heni Abid" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+      </div>
+      <!-- online badge -->
+      <div style="position:absolute;bottom:8px;right:8px;z-index:3;width:20px;height:20px;border-radius:50%;background:#10b981;border:3px solid var(--base-deep);box-shadow:0 0 8px #10b981;"></div>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric">
+        <div class="metric-value"><span class="counter" data-target="4" data-decimals="0">0</span><span>+</span></div>
+        <div class="metric-label">Ans d'études</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value"><span class="counter" data-target="4" data-decimals="0">0</span><span></span></div>
+        <div class="metric-label">Stages réalisés</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value"><span class="counter" data-target="6" data-decimals="0">0</span><span>+</span></div>
+        <div class="metric-label">Projets GitHub</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value"><span class="counter" data-target="8" data-decimals="0">0</span><span>+</span></div>
+        <div class="metric-label">Technologies</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="silk-divider reveal"></div>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section class="section section-center" id="experience">
+    <p class="section-tag reveal">Parcours professionnel</p>
+    <h2 class="section-title reveal reveal-d1">Expériences qui <strong>m'ont forgé</strong></h2>
+    <p class="section-subtitle reveal reveal-d2">Quatre stages enrichissants : IA automobile, Business Intelligence, CRM &amp; Infrastructure réseau.</p>
+
+    <div class="exp-grid">
+
+      <!-- ── Segula ── -->
+      <div class="exp-card reveal reveal-d1" data-color="#6366f1">
+        <div class="exp-card-body">
+          <div class="exp-card-header">
+            <div>
+              <div class="exp-card-date" style="color:#818cf8;">07/2025 → 08/2025</div>
+              <div class="exp-card-role">Stage d'initiation — Cycle Ingénieur</div>
+              <div class="exp-card-company" style="color:#6366f1;">Segula Technologies</div>
+            </div>
+        <div class="exp-card-visual" style="background:linear-gradient(135deg,#0c0e1f 0%,#1a1040 50%,#0f0c2a 100%);">
+          <div class="exp-visual-content">
+            <!-- Neural net SVG -->
+            <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+              <defs>
+                <radialGradient id="gSeg" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="transparent"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="140" cy="80" rx="120" ry="70" fill="url(#gSeg)"/>
+              <!-- Input nodes -->
+              <circle cx="40" cy="40" r="10" fill="#6366f1" opacity="0.8"/>
+              <circle cx="40" cy="80" r="10" fill="#6366f1" opacity="1"/>
+              <circle cx="40" cy="120" r="10" fill="#6366f1" opacity="0.8"/>
+              <!-- Hidden nodes -->
+              <circle cx="120" cy="55" r="12" fill="#8b5cf6" opacity="0.9"/>
+              <circle cx="120" cy="105" r="12" fill="#8b5cf6" opacity="0.9"/>
+              <!-- Output nodes -->
+              <circle cx="200" cy="60" r="13" fill="#a78bfa"/>
+              <circle cx="200" cy="100" r="13" fill="#a78bfa"/>
+              <!-- Output node glow pulse -->
+              <circle cx="200" cy="60" r="13" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.5">
+                <animate attributeName="r" values="13;22;13" dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Connections -->
+              <line x1="50" y1="40" x2="108" y2="55" stroke="rgba(139,92,246,0.3)" stroke-width="1.5"/>
+              <line x1="50" y1="80" x2="108" y2="55" stroke="rgba(139,92,246,0.5)" stroke-width="2"/>
+              <line x1="50" y1="80" x2="108" y2="105" stroke="rgba(139,92,246,0.5)" stroke-width="2"/>
+              <line x1="50" y1="120" x2="108" y2="105" stroke="rgba(139,92,246,0.3)" stroke-width="1.5"/>
+              <line x1="132" y1="55" x2="187" y2="60" stroke="rgba(167,139,250,0.6)" stroke-width="2.5"/>
+              <line x1="132" y1="105" x2="187" y2="100" stroke="rgba(167,139,250,0.6)" stroke-width="2.5"/>
+              <!-- Labels -->
+              <text x="20" y="38" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="7">M</text>
+              <text x="20" y="78" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="7">V</text>
+              <text x="20" y="118" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="7">A</text>
+              <text x="215" y="58" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="7">Tests ✓</text>
+              <text x="215" y="98" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="7">Défauts</text>
+              <!-- Animated signal -->
+              <circle r="3" fill="#a78bfa">
+                <animateMotion dur="1.8s" repeatCount="indefinite" path="M 50 80 L 120 55 L 200 60"/>
+              </circle>
+              <circle r="3" fill="#6366f1">
+                <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.8s" path="M 50 120 L 120 105 L 200 100"/>
+              </circle>
+              <!-- Title badge -->
+              <rect x="60" y="140" width="160" height="16" rx="8" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+              <text x="140" y="151" fill="#a78bfa" font-family="monospace" font-size="8" text-anchor="middle" letter-spacing="1">CHATBOT IA · AUTOMOBILE</text>
+            </svg>
+          </div>
+          <div class="exp-card-badge" style="background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.3);color:#a78bfa;">🤖 IA</div>
+        </div>
+            <div class="exp-card-num" style="color:rgba(99,102,241,0.2);">01</div>
+          </div>
+          <ul class="exp-card-list">
+            <li><span class="exp-li-dot" style="background:#6366f1;"></span>Développement d'un <strong>chatbot IA</strong> pour l'industrie automobile</li>
+            <li><span class="exp-li-dot" style="background:#6366f1;"></span>Entrée : modèle, vague, architecture &amp; composant du véhicule</li>
+            <li><span class="exp-li-dot" style="background:#6366f1;"></span>Sortie : liste automatique des tests après chaque mise à jour</li>
+          </ul>
+          <div class="exp-card-tags">
+            <span class="exp-tag" style="border-color:rgba(99,102,241,0.3);color:#818cf8;">Python</span>
+            <span class="exp-tag" style="border-color:rgba(99,102,241,0.3);color:#818cf8;">NLP</span>
+            <span class="exp-tag" style="border-color:rgba(99,102,241,0.3);color:#818cf8;">IA</span>
+            <span class="exp-tag" style="border-color:rgba(99,102,241,0.3);color:#818cf8;">Automobile</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ZEN Group ── -->
+      <div class="exp-card reveal reveal-d2" data-color="#06b6d4">
+        <div class="exp-card-body">
+          <div class="exp-card-header">
+            <div>
+              <div class="exp-card-date" style="color:#67e8f9;">01/2024 → 06/2024</div>
+              <div class="exp-card-role">Stage de Fin d'Études</div>
+              <div class="exp-card-company" style="color:#06b6d4;">ZEN Group</div>
+            </div>
+        <div class="exp-card-visual" style="background:linear-gradient(135deg,#051520 0%,#0a2535 50%,#061825 100%);">
+          <div class="exp-visual-content">
+            <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+              <defs>
+                <linearGradient id="barG1" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#0066ff"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+                <linearGradient id="barG2" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+                <linearGradient id="barG3" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+                <linearGradient id="barG4" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#d97706"/><stop offset="100%" stop-color="#fbbf24"/></linearGradient>
+              </defs>
+              <!-- Grid -->
+              <line x1="30" y1="20" x2="30" y2="130" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+              <line x1="30" y1="130" x2="260" y2="130" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+              <line x1="30" y1="97" x2="260" y2="97" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="30" y1="64" x2="260" y2="64" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="3,3"/>
+              <!-- Bars -->
+              <rect x="50" y="90" width="28" height="40" fill="url(#barG1)" rx="3" opacity="0.9"/>
+              <rect x="95" y="75" width="28" height="55" fill="url(#barG2)" rx="3" opacity="0.9"/>
+              <rect x="140" y="55" width="28" height="75" fill="url(#barG3)" rx="3" opacity="0.9"/>
+              <rect x="185" y="40" width="28" height="90" fill="url(#barG4)" rx="3" opacity="0.9"/>
+              <rect x="230" y="30" width="28" height="100" fill="url(#barG1)" rx="3" opacity="0.9"/>
+              <!-- Trend line -->
+              <polyline points="64,90 109,75 154,55 199,40 244,30" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="64" cy="90" r="3" fill="#06b6d4"/>
+              <circle cx="109" cy="75" r="3" fill="#06b6d4"/>
+              <circle cx="154" cy="55" r="3" fill="#06b6d4"/>
+              <circle cx="199" cy="40" r="3" fill="#06b6d4"/>
+              <circle cx="244" cy="30" r="4" fill="white" stroke="#06b6d4" stroke-width="2"/>
+              <!-- X labels -->
+              <text x="64" y="144" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="8" text-anchor="middle">Q1</text>
+              <text x="109" y="144" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="8" text-anchor="middle">Q2</text>
+              <text x="154" y="144" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="8" text-anchor="middle">Q3</text>
+              <text x="199" y="144" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="8" text-anchor="middle">Q4</text>
+              <text x="244" y="144" fill="rgba(6,182,212,0.8)" font-family="monospace" font-size="8" text-anchor="middle" font-weight="bold">Q5↑</text>
+              <!-- Badge -->
+              <rect x="60" y="5" width="160" height="16" rx="8" fill="rgba(6,182,212,0.1)" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+              <text x="140" y="16" fill="#67e8f9" font-family="monospace" font-size="8" text-anchor="middle" letter-spacing="1">OLAP · ANALYSE BI</text>
+            </svg>
+          </div>
+          <div class="exp-card-badge" style="background:rgba(6,182,212,0.1);border-color:rgba(6,182,212,0.3);color:#67e8f9;">📊 BI</div>
+        </div>
+            <div class="exp-card-num" style="color:rgba(6,182,212,0.2);">02</div>
+          </div>
+          <ul class="exp-card-list">
+            <li><span class="exp-li-dot" style="background:#06b6d4;"></span>Intégration d'un <strong>cube OLAP</strong> dans une base décisionnelle</li>
+            <li><span class="exp-li-dot" style="background:#06b6d4;"></span>Analyse multidimensionnelle pour la prise de décision</li>
+            <li><span class="exp-li-dot" style="background:#06b6d4;"></span>Renforcement des compétences en <strong>Business Intelligence</strong></li>
+          </ul>
+          <div class="exp-card-tags">
+            <span class="exp-tag" style="border-color:rgba(6,182,212,0.3);color:#67e8f9;">OLAP</span>
+            <span class="exp-tag" style="border-color:rgba(6,182,212,0.3);color:#67e8f9;">Oracle DB</span>
+            <span class="exp-tag" style="border-color:rgba(6,182,212,0.3);color:#67e8f9;">BI</span>
+            <span class="exp-tag" style="border-color:rgba(6,182,212,0.3);color:#67e8f9;">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Devsty ── -->
+      <div class="exp-card reveal reveal-d3" data-color="#10b981">
+        <div class="exp-card-body">
+          <div class="exp-card-header">
+            <div>
+              <div class="exp-card-date" style="color:#34d399;">01/2023 → 02/2023</div>
+              <div class="exp-card-role">Stage de Perfectionnement</div>
+              <div class="exp-card-company" style="color:#10b981;">Devsty</div>
+            </div>
+        <div class="exp-card-visual" style="background:linear-gradient(135deg,#051a10 0%,#0a2e1a 50%,#061a12 100%);">
+          <div class="exp-visual-content">
+            <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+              <!-- CRM Interface mockup -->
+              <!-- Window -->
+              <rect x="20" y="15" width="240" height="130" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.2)" stroke-width="1"/>
+              <!-- Titlebar -->
+              <rect x="20" y="15" width="240" height="22" rx="8" fill="rgba(16,185,129,0.08)"/>
+              <rect x="20" y="29" width="240" height="8" fill="rgba(16,185,129,0.08)"/>
+              <circle cx="34" cy="26" r="4" fill="rgba(255,95,87,0.6)"/>
+              <circle cx="48" cy="26" r="4" fill="rgba(254,188,46,0.6)"/>
+              <circle cx="62" cy="26" r="4" fill="rgba(40,200,64,0.6)"/>
+              <text x="140" y="30" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="8" text-anchor="middle">Odoo CRM — Devsty</text>
+              <!-- Sidebar -->
+              <rect x="20" y="37" width="50" height="108" fill="rgba(16,185,129,0.05)" stroke="rgba(16,185,129,0.1)" stroke-width="1"/>
+              <rect x="25" y="45" width="38" height="6" rx="3" fill="rgba(16,185,129,0.4)"/>
+              <rect x="25" y="57" width="30" height="5" rx="2" fill="rgba(255,255,255,0.1)"/>
+              <rect x="25" y="68" width="35" height="5" rx="2" fill="rgba(255,255,255,0.1)"/>
+              <rect x="25" y="79" width="28" height="5" rx="2" fill="rgba(255,255,255,0.1)"/>
+              <rect x="25" y="90" width="33" height="5" rx="2" fill="rgba(255,255,255,0.1)"/>
+              <rect x="25" y="101" width="36" height="5" rx="2" fill="rgba(255,255,255,0.1)"/>
+              <!-- Main area -->
+              <!-- KPI row -->
+              <rect x="78" y="43" width="50" height="28" rx="4" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.2)" stroke-width="1"/>
+              <text x="103" y="55" fill="#34d399" font-family="monospace" font-size="9" text-anchor="middle" font-weight="bold">127</text>
+              <text x="103" y="65" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="6" text-anchor="middle">Leads</text>
+              <rect x="134" y="43" width="50" height="28" rx="4" fill="rgba(6,182,212,0.1)" stroke="rgba(6,182,212,0.2)" stroke-width="1"/>
+              <text x="159" y="55" fill="#67e8f9" font-family="monospace" font-size="9" text-anchor="middle" font-weight="bold">89%</text>
+              <text x="159" y="65" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="6" text-anchor="middle">Taux</text>
+              <rect x="190" y="43" width="62" height="28" rx="4" fill="rgba(251,191,36,0.1)" stroke="rgba(251,191,36,0.2)" stroke-width="1"/>
+              <text x="221" y="55" fill="#fbbf24" font-family="monospace" font-size="9" text-anchor="middle" font-weight="bold">48K</text>
+              <text x="221" y="65" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="6" text-anchor="middle">Revenu</text>
+              <!-- Table header -->
+              <rect x="78" y="78" width="174" height="10" rx="2" fill="rgba(16,185,129,0.08)"/>
+              <text x="90" y="86" fill="rgba(16,185,129,0.7)" font-family="monospace" font-size="6">CLIENT</text>
+              <text x="160" y="86" fill="rgba(16,185,129,0.7)" font-family="monospace" font-size="6">STATUS</text>
+              <text x="218" y="86" fill="rgba(16,185,129,0.7)" font-family="monospace" font-size="6">MNT</text>
+              <!-- Rows -->
+              <text x="90" y="98" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="6">Entreprise A</text>
+              <rect x="157" y="92" width="28" height="8" rx="4" fill="rgba(16,185,129,0.2)"/>
+              <text x="171" y="98" fill="#34d399" font-family="monospace" font-size="6" text-anchor="middle">Signé</text>
+              <text x="222" y="98" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="6">12K</text>
+              <text x="90" y="110" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="6">Entreprise B</text>
+              <rect x="157" y="104" width="28" height="8" rx="4" fill="rgba(251,191,36,0.2)"/>
+              <text x="171" y="110" fill="#fbbf24" font-family="monospace" font-size="6" text-anchor="middle">Négoc.</text>
+              <text x="222" y="110" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="6">8K</text>
+              <text x="90" y="122" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="6">Entreprise C</text>
+              <rect x="157" y="116" width="28" height="8" rx="4" fill="rgba(99,102,241,0.2)"/>
+              <text x="171" y="122" fill="#a78bfa" font-family="monospace" font-size="6" text-anchor="middle">Prospect</text>
+              <text x="222" y="122" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="6">5K</text>
+              <!-- cursor blink -->
+              <rect x="78" y="133" width="6" height="8" rx="1" fill="#10b981" opacity="0.7">
+                <animate attributeName="opacity" values="0.7;0;0.7" dur="1s" repeatCount="indefinite"/>
+              </rect>
+            </svg>
+          </div>
+          <div class="exp-card-badge" style="background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.3);color:#34d399;">⚙️ CRM</div>
+        </div>
+            <div class="exp-card-num" style="color:rgba(16,185,129,0.2);">03</div>
+          </div>
+          <ul class="exp-card-list">
+            <li><span class="exp-li-dot" style="background:#10b981;"></span>Configuration de la plateforme <strong>CRM Odoo</strong></li>
+            <li><span class="exp-li-dot" style="background:#10b981;"></span>Personnalisation des modules selon les besoins métier</li>
+            <li><span class="exp-li-dot" style="background:#10b981;"></span>Intégration de solutions logicielles aux processus internes</li>
+          </ul>
+          <div class="exp-card-tags">
+            <span class="exp-tag" style="border-color:rgba(16,185,129,0.3);color:#34d399;">Odoo</span>
+            <span class="exp-tag" style="border-color:rgba(16,185,129,0.3);color:#34d399;">Python</span>
+            <span class="exp-tag" style="border-color:rgba(16,185,129,0.3);color:#34d399;">CRM</span>
+            <span class="exp-tag" style="border-color:rgba(16,185,129,0.3);color:#34d399;">ERP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Digital Click ── -->
+      <div class="exp-card reveal reveal-d4" data-color="#f59e0b">
+        <div class="exp-card-body">
+          <div class="exp-card-header">
+            <div>
+              <div class="exp-card-date" style="color:#fbbf24;">01/2022 → 02/2022</div>
+              <div class="exp-card-role">Stage d'Initiation</div>
+              <div class="exp-card-company" style="color:#f59e0b;">Digital Click</div>
+            </div>
+        <div class="exp-card-visual" style="background:linear-gradient(135deg,#1a1205 0%,#2a1e08 50%,#1a1305 100%);">
+          <div class="exp-visual-content">
+            <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+              <!-- Server rack visualization -->
+              <!-- Cabinet -->
+              <rect x="30" y="10" width="80" height="140" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+              <text x="70" y="24" fill="rgba(245,158,11,0.5)" font-family="monospace" font-size="7" text-anchor="middle">RACK</text>
+              <!-- Server units -->
+              <rect x="35" y="28" width="70" height="12" rx="2" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+              <circle cx="42" cy="34" r="2.5" fill="#10b981"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+              <rect x="48" y="31" width="30" height="2" rx="1" fill="rgba(255,255,255,0.15)"/>
+              <text x="100" y="37" fill="rgba(245,158,11,0.5)" font-family="monospace" font-size="6">SRV-01</text>
+              <rect x="35" y="44" width="70" height="12" rx="2" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+              <circle cx="42" cy="50" r="2.5" fill="#10b981"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" begin="0.5s"/></circle>
+              <rect x="48" y="47" width="25" height="2" rx="1" fill="rgba(255,255,255,0.15)"/>
+              <text x="100" y="53" fill="rgba(245,158,11,0.5)" font-family="monospace" font-size="6">SRV-02</text>
+              <rect x="35" y="60" width="70" height="12" rx="2" fill="rgba(99,102,241,0.1)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+              <circle cx="42" cy="66" r="2.5" fill="#6366f1"/>
+              <rect x="48" y="63" width="35" height="2" rx="1" fill="rgba(99,102,241,0.4)"/>
+              <text x="100" y="69" fill="rgba(99,102,241,0.7)" font-family="monospace" font-size="6">PROXMOX</text>
+              <rect x="35" y="76" width="70" height="12" rx="2" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.15)" stroke-width="1"/>
+              <circle cx="42" cy="82" r="2.5" fill="#f59e0b" opacity="0.8"/>
+              <rect x="48" y="79" width="20" height="2" rx="1" fill="rgba(255,255,255,0.1)"/>
+              <text x="100" y="85" fill="rgba(245,158,11,0.4)" font-family="monospace" font-size="6">VM-01</text>
+              <rect x="35" y="92" width="70" height="12" rx="2" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.15)" stroke-width="1"/>
+              <circle cx="42" cy="98" r="2.5" fill="#f59e0b" opacity="0.8"/>
+              <rect x="48" y="95" width="20" height="2" rx="1" fill="rgba(255,255,255,0.1)"/>
+              <text x="100" y="101" fill="rgba(245,158,11,0.4)" font-family="monospace" font-size="6">VM-02</text>
+              <!-- Network switch -->
+              <rect x="35" y="110" width="70" height="10" rx="2" fill="rgba(6,182,212,0.1)" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+              <text x="70" y="118" fill="rgba(6,182,212,0.7)" font-family="monospace" font-size="6" text-anchor="middle">SWITCH RG54</text>
+              <!-- Cables on right -->
+              <line x1="160" y1="30" x2="190" y2="30" stroke="rgba(245,158,11,0.4)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="160" y1="30" x2="160" y2="80" stroke="rgba(245,158,11,0.3)" stroke-width="2"/>
+              <line x1="160" y1="50" x2="190" y2="50" stroke="rgba(16,185,129,0.4)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="165" y1="70" x2="190" y2="70" stroke="rgba(99,102,241,0.4)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="165" y1="70" x2="165" y2="115" stroke="rgba(99,102,241,0.3)" stroke-width="2"/>
+              <line x1="165" y1="115" x2="190" y2="115" stroke="rgba(6,182,212,0.5)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Linux terminal -->
+              <rect x="195" y="20" width="75" height="120" rx="4" fill="rgba(0,0,0,0.4)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+              <rect x="195" y="20" width="75" height="14" rx="4" fill="rgba(245,158,11,0.1)"/>
+              <rect x="195" y="27" width="75" height="7" fill="rgba(245,158,11,0.1)"/>
+              <text x="232" y="30" fill="rgba(245,158,11,0.6)" font-family="monospace" font-size="6" text-anchor="middle">bash</text>
+              <text x="200" y="44" fill="#10b981" font-family="monospace" font-size="6">$ uname -a</text>
+              <text x="200" y="54" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="5">Linux ubuntu 5.15</text>
+              <text x="200" y="64" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="5">x86_64 GNU/Linux</text>
+              <text x="200" y="76" fill="#10b981" font-family="monospace" font-size="6">$ pvs</text>
+              <text x="200" y="86" fill="rgba(99,102,241,0.7)" font-family="monospace" font-size="5">ProxMox VE 7.4</text>
+              <text x="200" y="96" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="5">2 VMs running</text>
+              <text x="200" y="108" fill="#10b981" font-family="monospace" font-size="6">$ ping 192.168.1</text>
+              <text x="200" y="118" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="5">64 bytes reply</text>
+              <rect x="200" y="123" width="5" height="7" rx="1" fill="#10b981" opacity="0.8">
+                <animate attributeName="opacity" values="0.8;0;0.8" dur="0.9s" repeatCount="indefinite"/>
+              </rect>
+            </svg>
+          </div>
+          <div class="exp-card-badge" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.3);color:#fbbf24;">🖥️ SYS</div>
+        </div>
+            <div class="exp-card-num" style="color:rgba(245,158,11,0.2);">04</div>
+          </div>
+          <ul class="exp-card-list">
+            <li><span class="exp-li-dot" style="background:#f59e0b;"></span>Intervention sur armoire informatique et câblage <strong>RG54</strong></li>
+            <li><span class="exp-li-dot" style="background:#f59e0b;"></span>Systèmes <strong>Linux Ubuntu</strong> et virtualisation <strong>ProxMox</strong></li>
+            <li><span class="exp-li-dot" style="background:#f59e0b;"></span>Gestion pratique d'infrastructures réseau</li>
+          </ul>
+          <div class="exp-card-tags">
+            <span class="exp-tag" style="border-color:rgba(245,158,11,0.3);color:#fbbf24;">Linux</span>
+            <span class="exp-tag" style="border-color:rgba(245,158,11,0.3);color:#fbbf24;">ProxMox</span>
+            <span class="exp-tag" style="border-color:rgba(245,158,11,0.3);color:#fbbf24;">Réseau</span>
+            <span class="exp-tag" style="border-color:rgba(245,158,11,0.3);color:#fbbf24;">RG54</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="silk-divider reveal"></div>
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="section section-center" id="projects">
+    <p class="section-tag reveal">Portfolio</p>
+    <h2 class="section-title reveal reveal-d1">Projets que j'ai <strong>conçus &amp; livrés</strong></h2>
+    <p class="section-body reveal reveal-d2">Des applications complètes, de l'idée à la mise en production.</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card reveal reveal-d1">
+        <div class="project-emoji">🤖</div>
+        <div class="project-title">Chatbot IA Automobile</div>
+        <div class="project-desc">
+          Chatbot intelligent pour le secteur automobile. En entrée : modèle, vague, architecture 
+          et composant du véhicule. En sortie : liste des tests nécessaires après chaque mise à jour.
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">IA</span>
+          <span class="project-tag">NLP</span>
+          <span class="project-tag">Automobile</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d2">
+        <div class="project-emoji">🛒</div>
+        <div class="project-title">E-Commerce ReactJS</div>
+        <div class="project-desc">
+          Application e-commerce complète développée avec ReactJS. Interface moderne, 
+          panier dynamique, gestion des produits et système de commande en ligne.
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">ReactJS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">REST API</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d3">
+        <div class="project-emoji">🗄️</div>
+        <div class="project-title">Cube OLAP — BI Décisionnel</div>
+        <div class="project-desc">
+          Intégration d'un cube OLAP dans une base de données décisionnelle pour ZEN Group. 
+          Analyse multidimensionnelle des données métier pour faciliter la prise de décision stratégique.
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">OLAP</span>
+          <span class="project-tag">BI</span>
+          <span class="project-tag">Oracle</span>
+          <span class="project-tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d1">
+        <div class="project-emoji">🖥️</div>
+        <div class="project-title">App Desktop de Gestion</div>
+        <div class="project-desc">
+          Application desktop de gestion développée en .NET et C#. Interface graphique Windows 
+          pour la gestion des données, rapports et opérations métier de l'entreprise.
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">.NET</span>
+          <span class="project-tag">C#</span>
+          <span class="project-tag">SQL Server</span>
+          <span class="project-tag">WinForms</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d2">
+        <div class="project-emoji">🐍</div>
+        <div class="project-title">E-Commerce Django</div>
+        <div class="project-desc">
+          Plateforme e-commerce construite avec Django. Architecture MVC robuste, 
+          gestion des utilisateurs, catalogue produits, paiement et back-office d'administration.
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Django</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">MySQL</span>
+          <span class="project-tag">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d3">
+        <div class="project-emoji">⚙️</div>
+        <div class="project-title">Configuration CRM Odoo</div>
+        <div class="project-desc">
+          Déploiement et personnalisation de la plateforme Odoo pour Devsty. 
+          Configuration des modules CRM, automatisation des workflows et intégration 
+          aux processus métier de l'entreprise.
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Odoo</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">CRM</span>
+          <span class="project-tag">ERP</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="silk-divider reveal"></div>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section section-center" id="skills">
+    <p class="section-tag reveal">Expertise technique</p>
+    <h2 class="section-title reveal reveal-d1">Technologies que je <strong>maîtrise</strong></h2>
+    <p class="section-body reveal reveal-d2">Un stack complet, du front-end à l'infrastructure.</p>
+
+    <div class="skills-section reveal reveal-d2">
+      <div>
+        <div class="skill-group-title">Langages de programmation</div>
+        <div class="skill-row">
+          <div class="skill-label"><span>Python</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:82%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label"><span>Java</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:78%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label"><span>HTML / CSS</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:90%"></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Frameworks &amp; Outils</div>
+        <div class="skill-row">
+          <div class="skill-label"><span>Angular</span><span class="skill-pct">72%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:72%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label"><span>MySQL</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:80%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-cloud reveal reveal-d3">
+      <span class="tech-pill">Python</span>
+      <span class="tech-pill">Java</span>
+      <span class="tech-pill">HTML/CSS</span>
+      <span class="tech-pill">MySQL</span>
+    </div>
+
+    <!-- Languages -->
+    <div style="margin-top:56px;" class="reveal reveal-d3">
+      <div class="skill-group-title" style="text-align:center; margin-bottom:24px;">Langues</div>
+      <div class="langs">
+        <div class="lang-item"><div class="lang-name">Arabe</div><div class="lang-level">Langue maternelle</div></div>
+        <div class="lang-item"><div class="lang-name">Français</div><div class="lang-level">Courant</div></div>
+        <div class="lang-item"><div class="lang-name">Anglais</div><div class="lang-level">Intermédiaire</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="silk-divider reveal"></div>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section class="section section-center" id="education">
+    <p class="section-tag reveal">Formation</p>
+    <h2 class="section-title reveal reveal-d1">Un parcours académique <strong>solide &amp; progressif</strong></h2>
+
+    <div class="timeline" style="text-align:left;">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-date">En cours</div>
+        <div class="tl-role">Cycle Ingénieur — Génie Informatique</div>
+        <div class="tl-company">Institut International Technologique, Sfax</div>
+        <div class="tl-desc" style="list-style:none; padding:0;">1ère année — Tronc commun</div>
+      </div>
+      <div class="tl-item reveal reveal-d1">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Obtenu</div>
+        <div class="tl-role">Licence en Technologie de l'Informatique</div>
+        <div class="tl-company">Institut Supérieur des Éducations Technologiques, Sfax</div>
+        <div class="tl-desc" style="list-style:none; padding:0;">Spécialité : Développement de Systèmes d'Information</div>
+      </div>
+      <div class="tl-item reveal reveal-d2">
+        <div class="tl-dot"></div>
+        <div class="tl-date">2020 – 2021</div>
+        <div class="tl-role">Baccalauréat Technique</div>
+        <div class="tl-company">Lycée Monji Slim, Sfax</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="footer-cta" id="contact">
+    <p class="section-tag reveal">Travaillons ensemble</p>
+    <h2 class="section-title reveal reveal-d1">Disponible pour une<br><strong>nouvelle opportunité</strong></h2>
+    <p class="section-body reveal reveal-d2" style="margin:0 auto;">
+      Je suis ouvert aux offres de stage, CDI ou freelance. N'hésitez pas à me contacter !
+    </p>
+
+    <div class="contact-links reveal reveal-d3">
+      <a href="mailto:heniabid0@gmail.com" class="contact-link primary">
+        ✉ heniabid0@gmail.com
+      </a>
+      <a href="https://github.com/heniabid" target="_blank" class="contact-link">
+        ⌥ github.com/heniabid
+      </a>
+      <a href="tel:+21656630009" class="contact-link">
+        ✆ 566 300 09
+      </a>
+    </div>
+
+    <div class="footer-bar reveal reveal-d4" style="margin-top:80px;">
+      <div class="footer-brand">Heni Abid — 2025</div>
+      <div class="footer-links">
+        <span style="font-size:10px; color:var(--slate-warm); opacity:.5; letter-spacing:.05em;">Sfax, Tunisie</span>
+        <a href="https://github.com/heniabid" target="_blank">GitHub</a>
+        <a href="mailto:heniabid0@gmail.com">Email</a>
+        <span class="footer-credit">Template: <a href="https://templatemo.com" target="_blank" rel="nofollow">TemplateMo 621 Luminary</a></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
